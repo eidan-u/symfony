@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitController!{% endblock %}
+
+{% block body %}
+{% if produits is not empty %}
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>{{'produit.nom'|trans}}</th>
+            {# <th>{{'produit.photo'|trans}}</th> #}
+            <th>{{'produit.quantite'|trans}}</th>
+            <th>{{'produit.prix'|trans}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produit in produits %}
+        <tr>
+            <td><a href="{{path('Un_Produit', {'id':produit.id})}}">{{ produit.nom}}</a></td>
+
+            {# <td><img src="{{asset('/uploads/'~ produit.photo)}}"></td> #}
+            <td>{{produit.quantite}}</td>
+            <td>{{produit.prix}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+{% else %}
+{{'produit.emptyProd'|trans}}
+
+{% endif %}
+
+
+<div width="50%">{{form(Form_Product)}}</div>
+</div>
+
+{% endblock %}

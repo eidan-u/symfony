@@ -1,0 +1,35 @@
+produit:
+    nom: 'name'
+    quantite: 'quantities'
+    prix: 'price'
+    pic: 'picture'
+    del: 'delete'
+    delProd: 'delete this product'
+    addProd: 'You add a product'
+    emptyProd: 'There is no product, Add One!'
+
+panier:
+    produit: 'product'
+    prix: 'price'
+    quantite: 'quantities'
+    del: 'delete'
+    delBask: 'delete this Basket'
+    noBasket: 'there is no Basket'
+    addBasket: 'You add a Basket'
+    totalP: 'Total Price'
+    emptyBask: 'Your Basket is empty, try to add some product'
+
+base:
+    home: 'HOME'
+    prod: 'PRODUCTS'
+
+flash:
+    Prod:
+        add: "product add"
+        del: "product delete"
+        impPic: "Impossible to upload the image"
+        noProd: "Product unfindable"
+    Bask:
+        add: "basket add"
+        del: "basket delete"
+

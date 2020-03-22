@@ -1,0 +1,37 @@
+produit:
+    nom: 'nom'
+    quantite: 'quantités'
+    prix: 'prix'
+    pic: 'photo'
+    del: 'supprimer'
+    delProd: 'supprimer ce produit'
+    addProd: 'vous avez créé un produit'
+    emptyProd: 'Aucun produit dans le panier, ajoutez en un'
+
+panier:
+    produit: 'produit'
+    prix: 'prix'
+    quantite: 'quantités'
+    del: 'supprimer'
+    delBask: 'supprimer ce panier'
+    noBasket: 'Votre panier est vide'
+    addBasket: 'vous avez ajouté un panier'
+    totalP: 'Prix total'
+    emptyBask: 'Votre panier est vide, ajouter des produits... allez vite!!'
+
+base:
+    home: 'ACCUEIL'
+    prod: 'PRODUITS'
+
+flash:
+    Prod:
+        del: 'Produit ajouté'
+        add: 'Produit supprimé'
+        impPic: 'Impossible de telecharger la photo'
+        noProd: 'Produit introuvable'
+    Bask:
+        add: 'Panier ajouté'
+        del: 'produit supprimé'
+
+
+    

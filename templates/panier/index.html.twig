@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PanierController!{% endblock %}
+
+{% block body %}
+
+{% if panier is not empty %}
+
+
+{% set prixtotal = 0 %}
+<table border="1">
+    <thead>
+        <tr>
+            <th>{{'panier.produit'|trans}}</th>
+            <th>{{'panier.quantite'|trans}}</th>
+            <th>{{'panier.prix'|trans}}</th>
+            <th>{{'panier.del'|trans}}</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for mon_panier in panier %}
+        <tr>
+            <td> {{mon_panier.produit.nom}} </td>
+            <td> {{mon_panier.quantite}} </td>
+            {% set prixProduit = mon_panier.produit.prix * mon_panier.quantite %}
+            <td> {{prixProduit}} </td>
+            {% set prixtotal = prixtotal + prixProduit %}
+            <td>
+                <a href="{{path('panier_delete', {'id':mon_panier.id})}}">
+                  {{'panier.delBask'|trans}}
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>{{'panier.totalP'|trans}} {{prixtotal}}</p>
+
+
+
+<p> Vous avez {{panier|length}} Produits</p>
+{% else %}
+   {{'panier.emptyBask'|trans}}
+
+{% endif %}
+
+{% endblock %}
